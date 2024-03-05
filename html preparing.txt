@@ -1,0 +1,127 @@
+-------------html tag
+tudo entre o <html> </html> sera interpretado como codigo html, sem
+essa tag, pode ser que o browser interprete incorretamente o codigo.
+
+exemplo:
+<!DOCTYPE html>
+<html>
+
+</html>
+
+
+---------------HEAD <head>
+fica em cima do <body>, contem o metadata da uma pagina web.
+
+metadata e uma informacao sobre a pagina que nao e mostrada diretamente na pagina web.
+o metadata no head e a informacao sobre a propria pagina.
+
+exemplo:
+<head>
+</head>
+
+
+-----------------PAGE TITLES <title>
+<title> faz aparecer um texto na aba do browser.
+
+exemplo:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Coding Journal</title>
+  </head>
+</html>
+
+note que a aba do browser estara com o texto entre o <title>
+
+
+-------------------LINK WEB PAGES <a>
+exemplo:
+<a href="https://www.wikipedia.org/">This Is A Link To Wikipedia</a>
+
+
+----------------------OPENING LINKS IN A NEW WINDOW
+atributo 'target' da tag <a>
+
+para um link abrir em uma nova janela, o target precisa ser igual a _blank.
+
+exemplo:
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">The Brown Bear</a>
+
+
+---------------LINKING TO RELATIVE PAGE
+exemplo:
+<a href="./contact.html">Contact</a>
+
+
+------------------LINKING AT WILL
+usar imagens como links
+
+exemplo:
+<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/></a>
+
+
+--------------------LINKING TO SAME PAGE
+clicar num link e a propria pagina ir rolando ate o alvo.
+Precisa de id.
+
+exemplo:
+<p id="top">This is the top of the page!</p>
+<h1 id="bottom">This is the bottom! </h1>
+
+botar o # e nome do id para fazer a pagina ir ate o alvo.
+
+exemplo 2:
+<ol>
+ <li><a href="#top">Top</a></li>
+ <li><a href="#bottom">Bottom</a></li>
+</ol>
+
+assim quando eu clicar no link, a pagina vai para o alvo
+
+
+
+-------------------COMMENTS
+comecam com <!-- e acabam com -->
+
+exemplo:
+<!-- This is a comment that the browser will not display. -->
+
+
+
+
+-----------------------TABLE FOOTER <tfoot>
+a parte final de uma tabela longa.
+
+exemplo:
+<table>
+  <thead>
+    <tr>
+      <th>Quarter</th>
+      <th>Revenue</th>
+      <th>Costs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Q1</th>
+      <td>$10M</td>
+      <td>$7.5M</td>
+    </tr>
+    <tr>
+      <th>Q2</th>
+      <td>$12M</td>
+      <td>$5M</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>$22M</td>
+      <td>$12.5M</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+
+Footers sao normalmente utilizados para uma conclusao, como uma soma de dados e tals.

@@ -1,0 +1,43 @@
+----------------- FORM <form>
+exemplo:
+<body>
+        <form>
+            <input type="email" placeholder="EMAIL"><br>
+            <input type="password" placeholder="SENHA"><br>
+            <input type="button" value="LOGIN">
+        </form>
+</body>
+
+
+
+
+-------------------FIELDSET <fieldset>
+separar os elementos em grupo
+
+
+
+
+--------------------LEGEND <legend>
+"circula" o que esta dentro do fieldset e coloca um texto
+
+exemplo:
+<form>
+        <fieldset>
+            <legend>LOGIN</legend>
+            Nome de usuario: <input type="text" name="usuario"><br>
+            Senha: <input type="password" name="senha"><br>
+            <input type="button" value="logar">
+        </fieldset>
+</form>
+
+
+--------------METHOD e ACTION
+atributos do form
+
+exemplo:
+<form action="teste.jsp" method="POST">
+</form>
+
+
+--------------ENCTYPE
+E um atributo do <form> que especifica o tipo de codificacao dos dados submetidos.

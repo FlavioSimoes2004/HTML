@@ -1,0 +1,206 @@
+-------------PARA QUE?
+para aparecer informacoes, dados, etc...
+
+-------------TABLE <table>
+vai contar todos os dados tabulados que planejamos exibir.
+
+
+-------------TABLE ROWS
+em outros programas, o elemento table ja vem com linhas, colunas e celulas que vao segurar os dados, mas
+no html temos que criar todos esses componentes.
+
+o primeiro passo para passar um dado para uma table e adicionando linhas usando o table row elemento <tr>.
+
+exemplo:
+<table>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+</table>
+
+no exemplo acima, duas linhas foram adicionadas na tabela.
+
+
+-----------------TABLE DATA <td>
+linhas nao sao o suficiente para adicionar dados na tabela, cada elemento celula deve ser definidido,
+para adicionar dados, podemos usar o table data <td> elemento.
+
+exemplo:
+<table>
+  <tr>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+no exemplo acima, dois dados (73 e 81) foram adicionados em uma unica linha, por termos adicionados 2 table data,
+nos criamos 2 celulas de dados.
+
+se a tabela fosse exibida no broswer, iria mostrar uma tabela com 1 linha e 2 colunas.
+
+
+--------------------TABLE HEADINGS <th>
+adicionar titulos para linhas e colunas. o table heading e usado como o table data, exceto que com um titulo
+relevante. assim como o table data, o table heading deve ser colocado dentro de um table row.
+
+exemplo:
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+no exemplo acima, uma nova linha foi criada para guardar os titulos da coluna: um com titulo vazio, um com titulo
+de saturday e outro com titulo de sunday.
+o titulo vazio cria uma table cell sem nada para deixar a tabela alinhada.
+
+na segunda linha, um table heading foi criado para armazenar o titulo temperature.
+
+scope "row": esse valor deixa claro que o titulo e para uma linha.
+scope "col": esse valor deixa claro que o titulo e para uma coluna.
+
+
+
+
+--------------------TABLE BORDERS
+para adicionar bordas, usar o atributo border no <table> em seguida de ao atributo um valor inteiro.
+
+exemplo:
+<table border="1">
+  <tr>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+porem, esse atributo esta presente em versoes antigas do html, ent melhor n usar, msm que o browser consiga
+interpretar o codigo corretamente.
+
+usar CSS para colocar bordas.
+
+
+
+
+-------------------------SPANNING COLUMNS (colspan)
+e um atributo de <td>, deve receber valor de um inteiro, esse atributo deixa um espaco na celula
+deixando-a ocupar um numero x de colunas.
+
+exemplo:
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+  <tr>
+    <td colspan="2">Out of Town</td>
+    <td>Back in Town</td>
+  </tr>
+</table>
+
+
+
+
+------------------------SPANNING ROWS (rowspan)
+mesma coisa do colspan so que com linhas. o uso dos dois atributos podem deixar
+a tabela desalinhada.
+
+exemplo:
+<table>
+  <tr> <!-- Row 1 -->
+    <th></th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+  <tr> <!-- Row 2 -->
+    <th>Morning</th>
+    <td rowspan="2">Work</td>
+    <td rowspan="3">Relax</td>
+  </tr>
+  <tr> <!-- Row 3 -->
+    <th>Afternoon</th>
+  </tr>
+  <tr> <!-- Row 4 -->
+    <th>Evening</th>
+    <td>Dinner</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+-----------------------TABLE BODY <tbody>
+ser usado no meio da <table>
+
+exemplo:
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr>
+      <th>Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th>Afternoon</th>
+    </tr>
+    <tr>
+      <th>Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+------------------------TABLE HEAD <thead>
+ser usado no inicio da <table>
+
+
+exemplo:
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Saturday</th>
+      <th scope="col">Sunday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th scope="row">Afternoon</th>
+    </tr>
+    <tr>
+      <th scope="row">Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+--------------------------TABLE FOOT <tfoot>
+ser usado no fim da <table>
